@@ -5,8 +5,8 @@ import Navbar from './Components/Navbar';
 function App() {
   return (
     <>
-    <LoginPage/>
-    {/* <Navbar/> */}
+    {/* <LoginPage/> */}
+    <Navbar/>
     </>
   );
 }
