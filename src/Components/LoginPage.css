@@ -1,10 +1,10 @@
 .login-1{
     display: flex;
     flex-direction: row;
-    width: 1000px;
+    width: 800px;
     height: 500px;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     margin-top: 150px;
     border: 1px solid rgb(201, 201, 201);
     background: linear-gradient(to right, #ccffff 0%, #4aa5ff 100%);
@@ -19,7 +19,7 @@
 .login-input{
     width: 430px;
     height: 45px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border-radius: 5px;
     border: 1px solid rgb(182, 182, 182);
     font-size: medium;
@@ -45,7 +45,7 @@
     justify-content: center;
     font-family: "Sofia", sans-serif;
     font-size: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     margin-top: 20px;
 }
 .login-button:hover{
@@ -72,4 +72,29 @@
 }
 .login-2,.login-3{
     transition: 900ms;
+}
+
+.error-para1,.error-para2,.error-para3,.error-para4,.error-para5{
+    font-size: small;
+    color: red;
+}
+.error-para1{
+    position: absolute;
+    top:335px;
+}
+.error-para2{
+    position: absolute;
+    top: 428px;
+}
+.error-para3{
+    position: absolute;
+    top: 335px;
+}
+.error-para4{
+    position: absolute;
+    top: 428px;
+}
+.error-para5{
+    position: absolute;
+    top: 520px;
 }

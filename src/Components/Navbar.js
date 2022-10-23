@@ -1,19 +1,48 @@
-import React from 'react'
-import './NavBar.css';
-import bags from '../icons/shoppingbags.jpg'
-import {RiShoppingCartLine} from 'react-icons/ri';
-import {BsPersonCircle} from 'react-icons/bs';
-import {FcSearch} from 'react-icons/fc';
+import React, { useState } from "react";
+import "./NavBar.css";
+import bags from "../icons/shoppingbags.jpg";
+import { RiShoppingCartLine } from "react-icons/ri";
+import { BiCategory, BiSearchAlt2 } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const [option, setOption] = useState(false);
+  const handleOption = () => {
+    setOption((prev) => !prev);
+  };
+  const navigate = useNavigate();
   return (
     <>
-    <nav className='navbar'>
-        <label className='bag-name'><img src={bags} alt='bags icon' className='bag-img'/><span className='app-name'>&nbsp;WEB-Shopping</span></label>
-        <label className='navbar-searchbar'><input type='search' placeholder='Search...' className='searchbar'/><FcSearch className='FcSearch'/></label>
-        <label className='navbar-carts'>Cart<RiShoppingCartLine className='RiShoppingCartLine'/><span className='carts-count'>5</span></label>
-        <label className='navbar-user'><BsPersonCircle className='BsPersonCircle'/>&nbsp;user name</label>
-    </nav>
+      <nav className="navbar">
+        <label className="bag-name">
+          <img src={bags} alt="bags icon" className="bag-img" />
+          <span className="app-name">&nbsp;WEB-Shopping</span>
+        </label>
+        <label>
+          <span className="navbar-search">
+            <input
+              type="search"
+              placeholder="Search..."
+              className="searchbar"
+            />
+            <BiSearchAlt2 className="BiSearchAlt2" />
+          </span>
+        </label>
+        <label
+          className="navbar-carts"
+          onClick={() => {
+            navigate("/carts");
+          }}
+        >
+          Cart
+          <RiShoppingCartLine className="RiShoppingCartLine" />
+          <span className="carts-count">5</span>
+        </label>
+        <label className="navbar-user" onClick={handleOption}>
+          <BiCategory className="BsPersonCircle" />
+          &nbsp;Categories
+        </label>
+      </nav>
     </>
-  )
+  );
 }
