@@ -80,6 +80,9 @@
   font-weight: 400;
   line-height: 1.2;
 }
+.navbar-carts:hover{
+  cursor: pointer;
+}
 .RiShoppingCartLine,
 .BsPersonCircle {
   font-size: x-large;

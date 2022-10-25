@@ -7,8 +7,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 function App() {
   return (
     <>
-    <Home/>
-      {/* <Routes>
+      <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route
           path="/home"
@@ -19,7 +18,7 @@ function App() {
           }
         />
         <Route path="/" element={<Navigate replace to="/login" />} />
-      </Routes> */}
+      </Routes>
     </>
   );
 }

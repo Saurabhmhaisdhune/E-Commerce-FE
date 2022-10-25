@@ -5,7 +5,10 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { BiCategory, BiSearchAlt2 } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(setShow) {
+  const [value, setValue] = useState("1");
+
+
   const [option, setOption] = useState(false);
   const handleOption = () => {
     setOption((prev) => !prev);
@@ -30,9 +33,7 @@ export default function Navbar() {
         </label>
         <label
           className="navbar-carts"
-          onClick={() => {
-            navigate("/carts");
-          }}
+          onClick={()=>{setShow(value);}}
         >
           Cart
           <RiShoppingCartLine className="RiShoppingCartLine" />
