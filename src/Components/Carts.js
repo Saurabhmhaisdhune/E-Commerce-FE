@@ -36,7 +36,6 @@ export default function Carts({setShow,setCount}) {
     })
     .catch(error=>console.log(error));
   };
-  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
   const getData = () => {

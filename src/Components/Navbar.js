@@ -39,10 +39,10 @@ export default function Navbar({setShow,count}) {
           <RiShoppingCartLine className="RiShoppingCartLine" />
           <span className="carts-count">{count}</span>
         </label>
-        <label className="navbar-user" onClick={handleOption}>
+        {/* <label className="navbar-user" onClick={handleOption}>
           <BiCategory className="BsPersonCircle" />
           &nbsp;Categories
-        </label>
+        </label> */}
       </nav>
     </>
   );
