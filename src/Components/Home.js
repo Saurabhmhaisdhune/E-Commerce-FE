@@ -18,9 +18,10 @@ import Navbar from "./Navbar";
 
 export default function Home() {
   const [show,setShow] = useState(null);
+  const[count,setCount]=useState(0);
   return (
     <>
-    <Navbar setShow={setShow}/>
+    <Navbar setShow={setShow} count={count}/>
     <div className="all-header">
           <label>
             <span className="all-header-text">One Platform</span>
@@ -28,7 +29,7 @@ export default function Home() {
             <span className="all-header-text1">to make shopping Easier</span>
           </label>
         </div>
-        {show== null ? (<AllProducts/>) : (<Carts setShow={setShow}/>)}
+        {show== null ? (<AllProducts/>) : (<Carts setShow={setShow} setCount={setCount}/>)}
     </>
   );
 }

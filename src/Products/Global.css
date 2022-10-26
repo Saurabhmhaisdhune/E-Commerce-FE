@@ -25,9 +25,9 @@
     object-fit: cover;
     border-radius: 15px;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-  }
+  } */
 .all-model-name{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;

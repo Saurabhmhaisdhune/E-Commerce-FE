@@ -4,10 +4,9 @@ import axios from "axios";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
-import {CgSpinner} from "react-icons/cg"
 
+export default function Carts({setShow,setCount}) {
 
-export default function Carts() {
   // const [loding,setLoading]=useState(null);
 
   const allprice=400;
@@ -43,7 +42,7 @@ export default function Carts() {
   const getData = () => {
     fetch("https://web-shopp.herokuapp.com/data/carts")
       .then((response) => response.json())
-      .then((data) => setProducts(data));
+      .then((data) => {setProducts(data);setCount(data.length)});
   };
   useEffect(() => {
     getData();
@@ -55,20 +54,15 @@ export default function Carts() {
       .then((data) => getData());
   };
 
-  const [count, setCount] = useState(1);
-  const handleIncrement = (id) => {
-    setCount(count + 1);
-  };
-  const handleDecrement = (id) => {
-    setCount(count - 1);
-  };
+  let total=0;
+  products.map(item=>total=parseInt(item.price)+total)
   return (
     <div className="carts">
         
       <div className="main-cart1">
         <div className="carts-text1">
           <HiArrowNarrowLeft
-            onClick={() => navigate("/")}
+            onClick={()=>{setShow(null)}}
             className="HiArrowNarrowLeft"
           />
           <span className="carts-text">Continue Shopping</span>
@@ -92,7 +86,7 @@ export default function Carts() {
               </label>
              
               <label className="cart-product-final-price">
-                ₹ {value.price * count}
+                ₹ {value.price}
               </label>
               <label
                 className="cart-product-delete"
@@ -104,9 +98,9 @@ export default function Carts() {
           );
         })}
       </div>
-      <div>
+      <div >
         <h2 className="cart-total">
-          Cart Total: 500 ₹
+          <div >{`${"Cart Total:"} ${total} ${"₹"}`}</div>
           <StripeCheckout
             stripeKey="pk_test_51LqakBSH7Xqmg7IeNjL4893Y4nDuyjYw910LmfSDqSMRK18NZnEqDGuWCXJPt53tzN5UYNTNOnUDKHWyd3pJI8pg00Kdv6YqKd"
             token={makepayment}

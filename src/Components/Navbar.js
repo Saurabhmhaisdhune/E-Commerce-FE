@@ -5,7 +5,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { BiCategory, BiSearchAlt2 } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar(setShow) {
+export default function Navbar({setShow,count}) {
   const [value, setValue] = useState("1");
 
 
@@ -33,11 +33,11 @@ export default function Navbar(setShow) {
         </label>
         <label
           className="navbar-carts"
-          onClick={()=>{setShow(value);}}
+          onClick={()=>{setShow("nav");}}
         >
           Cart
           <RiShoppingCartLine className="RiShoppingCartLine" />
-          <span className="carts-count">5</span>
+          <span className="carts-count">{count}</span>
         </label>
         <label className="navbar-user" onClick={handleOption}>
           <BiCategory className="BsPersonCircle" />
