@@ -39,7 +39,7 @@ export default function Carts({setShow,setCount}) {
   const [products, setProducts] = useState([]);
 
   const getData = () => {
-    fetch("https://web-shopp.herokuapp.com/data/carts")
+    fetch("https://shopping-app-od33.onrender.com/data/carts")
       .then((response) => response.json())
       .then((data) => {setProducts(data);setCount(data.length)});
   };
@@ -49,7 +49,7 @@ export default function Carts({setShow,setCount}) {
 
   const handleDelete = (id) => {
     axios
-      .delete("https://web-shopp.herokuapp.com/data/carts/delete/" + id)
+      .delete("https://shopping-app-od33.onrender.com/data/carts/delete/" + id)
       .then((data) => getData());
   };
 

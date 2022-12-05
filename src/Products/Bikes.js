@@ -7,7 +7,7 @@ export default function Bikes() {
   const[products,setProducts]=useState([]);
 
   const getData = () => {
-    fetch("https://web-shopp.herokuapp.com/data/bike")
+    fetch("https://shopping-app-od33.onrender.com/data/bike")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   };
@@ -18,7 +18,7 @@ export default function Bikes() {
   const handleSubmit=(item)=>{
     axios
     .post(
-      "https://web-shopp.herokuapp.com/data/carts/post",
+      "https://shopping-app-od33.onrender.com/data/carts/post",
       JSON.stringify(item),
       {
         headers: {
