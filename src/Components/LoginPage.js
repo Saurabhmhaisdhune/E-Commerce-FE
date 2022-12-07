@@ -3,7 +3,6 @@ import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
-import { validSchema } from "../schemas";
 
 let initialValue = {
   name: "",
@@ -27,15 +26,6 @@ export default function LoginPage() {
     setView(false);
   };
 
-  // const { values, errors, touched, handleBlur } = useFormik({
-  //   initialValues: { usernames: "", passwords: "" },
-  //   validationSchema: validSchema,
-  //   onSubmit: (values, action) => {
-  //     console.log(values);
-  //     action.resetForm();
-  //   },
-  // });
-
   //for login
   const navigate = useNavigate();
 
@@ -48,7 +38,7 @@ export default function LoginPage() {
   });
 
   const login = async (userDetails) => {
-    const data = await fetch("https://shopping-app-od33.onrender.com/users/login", {
+    const data = await fetch("https://shopping-app-beoy.onrender.com/users/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -76,7 +66,7 @@ export default function LoginPage() {
   const handleSubmits = () => {
     axios
       .post(
-        "https://shopping-app-od33.onrender.com/users/register",
+        "https://shopping-app-beoy.onrender.com/users/register",
         JSON.stringify(register),
         {
           headers: {
@@ -102,14 +92,10 @@ export default function LoginPage() {
                   placeholder="Email.."
                   onChange={formik.handleChange}
                   value={formik.values.usernames}
-                  // onBlur={handleBlur}
                   name="usernames"
                   className="login-input"
                 />
                 <br />
-                {/* {errors.usernames && touched.usernames ? (
-                  <p className="error-para1">{errors.usernames}</p>
-                ) : null} */}
                 <label className="input-text">Password</label>
                 <br />
                 <input
@@ -117,14 +103,10 @@ export default function LoginPage() {
                   placeholder="Password.."
                   onChange={formik.handleChange}
                   value={formik.values.passwords}
-                  // onBlur={handleBlur}
                   name="passwords"
                   className="login-input"
                 />
-                {/* <br />
-                {errors.passwords && touched.passwords ? (
-                  <p className="error-para2">{errors.passwords}</p>
-                ) : null} */}
+                <br />
                 <button type="submit" className="login-button">
                   Login
                 </button>
@@ -149,13 +131,9 @@ export default function LoginPage() {
                 placeholder="Full Name.."
                 className="login-input"
                 onChange={handleChanges}
-                // onBlur={handleBlur}
                 name="name"
               />
               <br />
-              {/* {errors.name && touched.name ? (
-                <p className="error-para3">{errors.name}</p>
-              ) : null} */}
               <label className="input-text">Email</label>
               <br />
               <input
@@ -164,12 +142,8 @@ export default function LoginPage() {
                 name="usernames"
                 className="login-input"
                 onChange={handleChanges}
-                // onBlur={handleBlur}
               />
               <br />
-              {/* {errors.usernames && touched.usernames ? (
-                <p className="error-para4">{errors.usernames}</p>
-              ) : null} */}
               <label className="input-text">Password</label>
               <br />
               <input
@@ -178,12 +152,8 @@ export default function LoginPage() {
                 name="passwords"
                 className="login-input"
                 onChange={handleChanges}
-                // onBlur={handleBlur}
               />
               <br />
-              {/* {errors.passwords && touched.passwords ? (
-                <p className="error-para5">{errors.passwords}</p>
-              ) : null} */}
               <button className="login-button" onClick={registers}>
                 Register
               </button>

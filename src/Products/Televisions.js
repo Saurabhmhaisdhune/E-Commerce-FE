@@ -6,7 +6,7 @@ export default function Televisions() {
   const [products, setProducts] = useState([]);
 
   const getData = () => {
-    fetch("https://shopping-app-od33.onrender.com/data/television")
+    fetch("https://shopping-app-beoy.onrender.com/data/television")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   };
@@ -17,7 +17,7 @@ export default function Televisions() {
   const handleSubmit=(item)=>{
     axios
     .post(
-      "https://shopping-app-od33.onrender.com/data/carts/post",
+      "https://shopping-app-beoy.onrender.com/data/carts/post",
       JSON.stringify(item),
       {
         headers: {

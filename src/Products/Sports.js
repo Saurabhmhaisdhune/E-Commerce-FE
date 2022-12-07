@@ -7,7 +7,7 @@ export default function Sports() {
   const[products,setProducts]=useState([]);
 
   const getData = () => {
-    fetch("https://shopping-app-od33.onrender.com/data/sport")
+    fetch("https://shopping-app-beoy.onrender.com/data/sport")
       .then((response) => response.json())
       .then((data) => setProducts(data));
   };
@@ -18,7 +18,7 @@ export default function Sports() {
   const handleSubmit=(item)=>{
     axios
     .post(
-      "https://shopping-app-od33.onrender.com/data/carts/post",
+      "https://shopping-app-beoy.onrender.com/data/carts/post",
       JSON.stringify(item),
       {
         headers: {
