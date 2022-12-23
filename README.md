@@ -1,2 +1,2 @@
 <div><h1>DEPLOYED LINK</h1><a href="https://glowing-gumption-82f38f.netlify.app/">https://glowing-gumption-82f38f.netlify.app/</>
-<h1>DESCRIPTION</h1><p>An online hotel booking website used for reservation of hotel room that makes it simple for guests to book of hotel room at your required location and activities online</p></div>.
+<h1>DESCRIPTION</h1><p>An e-commerce website is one that allows people to buy products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, make payments and provide customer service.</p></div>.
