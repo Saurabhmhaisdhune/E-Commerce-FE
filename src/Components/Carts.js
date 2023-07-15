@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Carts.css";
 import axios from "axios";
 import { HiArrowNarrowLeft } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 
 export default function Carts({setShow,setCount}) {

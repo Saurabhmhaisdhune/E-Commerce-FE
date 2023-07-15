@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import Categories from "./Categories";
+// import Categories from "./Categories";
 import Carts from "./Carts";
-import { Route, Routes } from "react-router-dom";
-import Televisions from "../Products/Televisions";
-import Mobile from "../Products/Mobile";
-import Clothes from "../Products/Clothes";
-import Laptops from "../Products/Laptops";
-import Sports from "../Products/Sports";
-import Music from "../Products/Music";
-import Furniture from "../Products/Furniture";
-import Bikes from "../Products/Bikes";
+// import { Route, Routes } from "react-router-dom";
+// import Televisions from "../Products/Televisions";
+// import Mobile from "../Products/Mobile";
+// import Clothes from "../Products/Clothes";
+// import Laptops from "../Products/Laptops";
+// import Sports from "../Products/Sports";
+// import Music from "../Products/Music";
+// import Furniture from "../Products/Furniture";
+// import Bikes from "../Products/Bikes";
 import AllProducts from "./AllProducts";
 
 import "../Components/AllProducts.css";
