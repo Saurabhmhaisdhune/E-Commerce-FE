@@ -1,0 +1,24 @@
+.all-header{
+    background-color: #547794;
+    color: white;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.all-header-text{
+
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.all-header-text1{
+
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+

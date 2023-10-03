@@ -1,5 +1,4 @@
 import React from "react";
-import "../Components/AllProducts.css";
 import Bikes from "../Products/Bikes";
 import Clothes from "../Products/Clothes";
 import Furniture from "../Products/Furniture";

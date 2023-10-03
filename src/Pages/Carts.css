@@ -14,7 +14,7 @@
     margin: 50px 150px 20px 150px;
     padding: 10px;
     border-radius: 25px;
-    height: 500px;
+    height: 400px;
     overflow-y: scroll;
 }
 .cart-product-value{
@@ -67,6 +67,7 @@
      margin: 15px;
      display: flex;
      align-items: center;
+     position: sticky;
 }
 .HiArrowNarrowLeft:hover{
     background-color: rgb(169, 169, 169);
@@ -94,27 +95,9 @@
 }
 .checkout-button:hover{
     cursor: pointer;
-    /* background-color: rgb(139, 178, 255);
-    color: black; */
     font-size: 17px;
 }
 .cart-total{
     position: absolute;
     right: 150px;
 }
-/* .loadingSpinner {
-    width: 64px;
-    height: 64px;
-    border: 8px solid;
-    border-color: #00cc66 transparent;
-    border-radius: 50%;
-    animation: spin 1.2s linear infinite;
-  }
-  @keyframes spin{
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } */

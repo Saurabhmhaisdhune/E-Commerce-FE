@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Global.css";
-import axios from 'axios'
+import axios from "axios";
 
 export default function Televisions() {
   const [products, setProducts] = useState([]);
@@ -14,20 +14,21 @@ export default function Televisions() {
     getData();
   }, []);
 
-  const handleSubmit=(item)=>{
-    axios
-    .post(
+  const handleSubmit = (item) => {
+    axios.post(
       "https://shopping-app-beoy.onrender.com/data/carts/post",
       JSON.stringify(item),
       {
         headers: {
-          "Content-type": "application/json"
-   }})
-  }; 
-  
+          "Content-type": "application/json",
+        },
+      }
+    );
+  };
+
   return (
     <div>
-      <label className="category-name">Televisions</label>
+      <div className="category-name">Televisions</div>
       <div className="all-flex-item">
         {products.map((value, index) => {
           return (
@@ -37,32 +38,47 @@ export default function Televisions() {
                 alt="product-images"
                 className="product-images"
               />
-              <br />
-              <label className="all-model-name">{value.modelName}</label>
-              <br />
-              <label className="all-model-brand">
+              <div className="all-model-name">{value.modelName}</div>
+              <div className="all-model-brand">
                 {value.brand} - {value.category}
-              </label>
-              <br />
-              <label className="all-model-price">
+              </div>
+              <div className="all-model-price">
                 ₹ <span className="previous-price">{value.previousPrice}</span>
                 &nbsp;&nbsp;&nbsp;₹ {value.price}
-              </label>
-              <br />
+              </div>
               {!value.added ? (
-                <button className="add-cart-button" onClick={()=>{setProducts(products.map(item=>
-                {return {
-                  ...item,
-                  added:item.id===value.id?true:item.added
-                }}));handleSubmit(value);}} >
+                <button
+                  className="add-cart-button"
+                  onClick={() => {
+                    setProducts(
+                      products.map((item) => {
+                        return {
+                          ...item,
+                          added: item.id === value.id ? true : item.added,
+                        };
+                      })
+                    );
+                    handleSubmit(value);
+                  }}
+                >
                   Add To Cart
                 </button>
               ) : (
-                <button className="add-cart-button" onClick={()=>{setProducts(products.map(item=>
-                  {return {
-                    ...item,
-                    added:item.id===value.id?false:item.added
-                  }}))}}>Added</button>
+                <button
+                  className="add-cart-button"
+                  onClick={() => {
+                    setProducts(
+                      products.map((item) => {
+                        return {
+                          ...item,
+                          added: item.id === value.id ? false : item.added,
+                        };
+                      })
+                    );
+                  }}
+                >
+                  Added
+                </button>
               )}
             </div>
           );

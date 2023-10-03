@@ -1,6 +1,6 @@
 import "./App.css";
-import Home from "./Components/Home";
-import LoginPage from "./Components/LoginPage";
+import Home from "./Pages/Home";
+import LoginPage from "./Pages/Authentication";
 import { Navigate, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
