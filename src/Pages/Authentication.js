@@ -11,22 +11,8 @@ let initialValue = {
 };
 
 export default function LoginPage() {
-  // const [show, setShow] = useState(false);
-  // const handleShow = () => {
-  //   setShow(true);
-  //   setView(false);
-  // };
-  // const [view, setView] = useState(false);
-  // const handleview = () => {
-  //   setView(true);
-  //   setShow(false);
-  // };
-  // const registers = () => {
-  //   handleSubmits();
-  //   setView(false);
-  // };
 
-  //for login
+  //Login
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -57,7 +43,7 @@ export default function LoginPage() {
     }
   };
 
-  //for registration
+  //Registration
   const [register, setRegister] = useState(initialValue);
 
   const handleChanges = (e) => {
